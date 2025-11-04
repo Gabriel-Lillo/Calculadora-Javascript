@@ -1,5 +1,13 @@
-function sumar(a,b) {
-  return a+b;
+const { createElement } = require("react");
+
+function sumar() {
+    const n1 = parseFloat(document.getElementById("num1").value);
+    const n2 = parseFloat(document.getElementById("num1").value);
+
+
+    resultado = n1 + n2;
+
+    document.getElementById("resultado").textContent = resultado;
 }
 
 function restar(a,b) {
@@ -30,7 +38,9 @@ function modulo(a,b) {
   return a%b;
 }
 
-function menu(op) {
+function menu() {
+    const op = document.getElementById("op").value;
+    const out = document.getElementById("resultado");
 
   switch (op) {
   case 1:
